@@ -1,0 +1,20 @@
+.landing-page {
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Stack name and tagline vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 85vh; /* Full viewport height */
+    text-align: center; /* Center text */
+     /* Text color */
+  }
+  
+  .name {
+    font-size: 10rem; /* Adjust font size for name */
+    font-weight: bold; /* Bold text for name */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .tagline {
+    font-size: 1.5rem; /* Adjust font size for tagline */
+    margin: 10px 0 0 0; /* Add some space above tagline */
+  }

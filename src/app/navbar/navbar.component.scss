@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 10px 20px;
     z-index: 10;
     box-sizing: border-box;
+    color: rgb(156, 154, 154);
 }
 
 .title, .links h2 {
