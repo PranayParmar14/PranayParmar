@@ -5,7 +5,7 @@ import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { AboutComponent } from "./about/about.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { ContactComponent } from "./contact/contact.component";
-import { FooterComponent } from "./footer/footer.component";
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -42,6 +42,4 @@ export class AppComponent  implements OnInit{
   private isBrowser(): boolean {
     return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
   }
-
-
 }
