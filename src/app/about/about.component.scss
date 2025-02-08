@@ -1,0 +1,29 @@
+.about {
+    text-align: left;
+    padding: 20px;
+  
+    h1 {
+      font-size: 2.5rem;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  
+    .about-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+  
+      img {
+        max-width: 200px; /* Adjust image size */
+        border-radius: 50%; /* Make it circular */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+      }
+  
+      p {
+        flex: 1; /* Ensures the text takes up the remaining space */
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+    }
+  }
+  

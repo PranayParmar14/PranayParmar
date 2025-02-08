@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { AboutComponent } from "./about/about.component";
-import { ProjectsComponent } from "./projects/projects.component";
 import { ContactComponent } from "./contact/contact.component";
+import { ExperienceComponent } from './experience/experience.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, LandingPageComponent, AboutComponent, ProjectsComponent, ContactComponent],
+  imports: [NavbarComponent, LandingPageComponent, AboutComponent, ExperienceComponent ,ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
