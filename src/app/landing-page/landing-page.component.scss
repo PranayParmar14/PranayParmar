@@ -5,16 +5,31 @@
     align-items: center; /* Center horizontally */
     height: 85vh; /* Full viewport height */
     text-align: center; /* Center text */
-     /* Text color */
-  }
-  
-  .name {
+    transform: translateY(-5%); /* Moves the section 5% upwards */
+}
+
+.name {
     font-size: 10rem; /* Adjust font size for name */
     font-weight: bold; /* Bold text for name */
     margin: 0; /* Remove default margin */
-  }
-  
-  .tagline {
+}
+
+.tagline {
     font-size: 1.5rem; /* Adjust font size for tagline */
     margin: 10px 0 0 0; /* Add some space above tagline */
-  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-page {
+        transform: translateY(-3%); /* Smaller upward adjustment for mobile */
+    }
+
+    .name {
+        font-size: 6rem; /* Adjust font size for smaller screens */
+    }
+
+    .tagline {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}

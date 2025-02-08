@@ -1,4 +1,17 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+:root {
+  --link-hover-color: #fff; /* Default hover color */
+}
 
+body.dark-theme {
+  --link-hover-color: #fff; /* Hover color for dark theme */
+}
+
+body.light-theme {
+  --link-hover-color: #000; /* Hover color for light theme */
+}
 
 body.dark-theme {
   background-color: #000;

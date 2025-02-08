@@ -9,6 +9,7 @@
     z-index: 10;
     box-sizing: border-box;
     color: rgb(156, 154, 154);
+    position: relative; /* Added to ensure proper layering */
 }
 
 .title, .links h2 {
@@ -19,6 +20,7 @@
 .links {
     display: flex;
     gap: 20px;
+    transition: all 0.3s ease;
 }
 
 .links h2 {
@@ -39,7 +41,7 @@ div.topBotomBordersIn a:after {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #FFF; /* Border color */
+    background: var(--link-hover-color);
     content: "";
     opacity: 0;
     transition: all 0.3s;
@@ -59,4 +61,63 @@ div.topBotomBordersIn a:hover:before,
 div.topBotomBordersIn a:hover:after {
     opacity: 1;
     transform: translateY(0px);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background: var(--link-hover-color);
+        transition: all 0.3s ease;
+    }
+}
+
+/* Ensure animation works only on small screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex; /* Display hamburger menu on smaller screens */
+    }
+
+    .hamburger-menu.open .line:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .hamburger-menu.open .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.open .line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--bg-color);
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 100; /* Added to ensure it is above other elements */
+    }
+
+    .links.open {
+        display: flex;
+    }
+
+    /* Remove hover animation for links in mobile view */
+    div.topBotomBordersIn a:hover:before,
+    div.topBotomBordersIn a:hover:after {
+        opacity: 0;
+        transform: none;
+    }
 }
