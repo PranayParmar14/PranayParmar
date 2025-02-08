@@ -13,3 +13,8 @@
 <app-projects></app-projects>
 <app-contact></app-contact>
 <app-footer></app-footer>
+<div class="theme-toggle-container">
+    <label class="theme-toggle">
+      <input type="checkbox" (change)="toggleTheme()" [checked]="isDarkMode"/>
+      <span class="slider"></span>
+    </label>

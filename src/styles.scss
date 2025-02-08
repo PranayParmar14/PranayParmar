@@ -5,6 +5,30 @@ h2{
     color: #8f8f8f;
 }
 
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Optional: Adjust link styles for both themes */
+a {
+  text-decoration: none;
+}
+
+body.dark-theme a {
+  color: #fff;
+}
+
+body.light-theme a {
+  color: #000;
+}
+
+
 // h2.about {
 //     text-align: center;
 //     display: inline-block;
