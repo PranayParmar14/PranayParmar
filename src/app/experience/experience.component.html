@@ -1,1 +1,38 @@
-<p>experience works!</p>
+<div class="experience" id="experience">
+  <h1>Experience</h1>
+
+  <!-- Skills Section -->
+  <div class="skills">
+    <h2>Skills</h2>
+    <!-- Content for skills -->
+  </div>
+
+  <!-- Work Experience Section -->
+  <div class="work-experience">
+    <h2>Work Experience</h2>
+    <div class="timeline-container">
+      <div
+        *ngFor="let point of timelineData; let i = index"
+        class="timeline-point"
+      >
+        <div class="point-circle" (click)="openModal(i)"></div>
+        <h3>{{ point.title }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" *ngIf="activePoint !== null">
+    <div class="modal-content">
+      <h3>{{ timelineData[activePoint].title }}</h3>
+      <p>{{ timelineData[activePoint].details }}</p>
+      <button (click)="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="projects">
+    <h2>Projects</h2>
+    <!-- Content for projects -->
+  </div>
+</div>
