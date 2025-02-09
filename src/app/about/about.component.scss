@@ -1,29 +1,48 @@
 .about {
-    text-align: left;
-    padding: 20px;
-  
-    h1 {
-      font-size: 2.5rem;
-      text-align: left;
-      margin-bottom: 20px;
+  margin: 20px;
+
+  .about-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Centered by default for mobile */
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column; /* Default to stacking content vertically */
+    align-items: center;
+    gap: 20px; /* Add spacing between elements */
+  }
+
+  .about-image {
+    width: 150px; /* Adjust size of the image */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image fits within the circle */
+  }
+
+  .about-description {
+    max-width: 90%; /* Limit width for better readability */
+    text-align: justify; /* Align text for easier reading */
+    line-height: 1.6; /* Improve line spacing */
+  }
+
+  @media (min-width: 768px) {
+    .about-title {
+      text-align: left; /* Align to the left on larger screens */
     }
-  
+
     .about-content {
-      display: flex;
+      flex-direction: row; /* Switch to horizontal layout on larger screens */
       align-items: flex-start;
-      gap: 20px;
-  
-      img {
-        max-width: 200px; /* Adjust image size */
-        border-radius: 50%; /* Make it circular */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
-      }
-  
-      p {
-        flex: 1; /* Ensures the text takes up the remaining space */
-        margin: 10px 0;
-        line-height: 1.6;
-      }
+    }
+
+    .about-description {
+      max-width: 60%; /* Increase readable width on larger screens */
+      text-align: left; /* Align text to the left for a clean desktop look */
     }
   }
+}
+
+
   
