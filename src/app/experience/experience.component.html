@@ -10,29 +10,46 @@
   <!-- Work Experience Section -->
   <div class="work-experience">
     <h2>Work Experience</h2>
-    <div class="timeline-container">
-      <div
-        *ngFor="let point of timelineData; let i = index"
-        class="timeline-point"
-      >
-        <div class="point-circle" (click)="openModal(i)"></div>
-        <h3>{{ point.title }}</h3>
+    <div class="timeline-wrapper" [class.vertical]="isMobile">
+      <div class="timeline">
+        <div
+          *ngFor="let event of timelineData; let i = index"
+          class="timeline-event"
+          (mouseover)="hoveredPoint = i"
+          (mouseleave)="hoveredPoint = null"
+          (click)="openModal(i)"
+        >
+          <!-- The dot -->
+          <div class="timeline-dot"></div>
+
+          <!-- The title that appears on hover -->
+          <div class="timeline-title" *ngIf="hoveredPoint === i">
+            {{ event.title }}
+          </div>
+
+          <!-- The date below the dot -->
+          <div class="timeline-date">{{ event.date }}</div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal" *ngIf="activePoint !== null">
-    <div class="modal-content">
-      <h3>{{ timelineData[activePoint].title }}</h3>
-      <p>{{ timelineData[activePoint].details }}</p>
-      <button (click)="closeModal()">Close</button>
+    <!-- Modal (shows up when a point is clicked, NOT on hover) -->
+    <div
+      class="modal"
+      *ngIf="activePoint !== null"
+      [ngStyle]="{ top: '50px', left: activePoint * 150 + 'px' }"
+    >
+      <div class="modal-content">
+        <h3>{{ timelineData[activePoint]?.title }}</h3>
+        <p>{{ timelineData[activePoint]?.details }}</p>
+        <button (click)="closeModal()">Close</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Projects Section -->
-  <div class="projects">
-    <h2>Projects</h2>
-    <!-- Content for projects -->
+    <!-- Projects Section -->
+    <div class="projects">
+      <h2>Projects</h2>
+      <!-- Content for projects -->
+    </div>
   </div>
 </div>

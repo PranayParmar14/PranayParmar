@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,29 +11,45 @@ import { CommonModule } from '@angular/common';
 export class ExperienceComponent {
   timelineData = [
     {
-      title: 'Software Engineer Intern',
-      details:
-        'Worked on migrating pipelines and integrating CI/CD workflows at Nationwide.',
+      date: 'Feb 14, 2023',
+      title: "Valentine's Day",
+      details: 'A day to celebrate love and affection.',
     },
     {
-      title: 'Hackathon Participant',
-      details:
-        'Built a recognition platform during an enterprise-wide hackathon.',
+      date: 'Sep 7, 2023',
+      title: 'Project Launch',
+      details: 'Official launch of our new project.',
     },
     {
-      title: 'AI Translator Project',
-      details:
-        'Developed a full-stack AI-powered translator using ChatGPT Whisper.',
+      date: 'Mar 7, 2023',
+      title: 'Team Meetup',
+      details: 'Annual team meetup and strategy planning.',
     },
   ];
 
+  isMobile = false; // Default to false
   activePoint: number | null = null;
+  hoveredPoint: number | null = null;
 
-  openModal(index: number): void {
-    this.activePoint = index;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth <= 768; // Only runs in the browser
+    }
   }
 
-  closeModal(): void {
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth <= 768;
+    }
+  }
+
+  openModal(index: number) {
+    this.activePoint = this.activePoint === index ? null : index; // Toggle modal
+    Modal.open();
+  }
+
+  closeModal() {
     this.activePoint = null;
   }
 }
