@@ -1,10 +1,9 @@
-html 
-{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 :root {
   --link-hover-color: #fff; /* Default hover color */
@@ -40,8 +39,13 @@ body.dark-theme a {
 body.light-theme a {
   color: #000;
 }
+// h2 {
+//   margin-top: 50px !important;
+//   margin-bottom: 50px !important;
+//   font-size: medium !important;
+// }
 
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+//@import "bootstrap/scss/bootstrap";
