@@ -1,51 +1,65 @@
+/* Define color variables */
+:root {
+  --text-color: #000;
+  --bg-color: #fff;
+  //--icon-bg-color: #ff0000; /* Default icon color */
+  --link-hover-color: #000; /* Default for light mode */
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --bg-color: #000;
+    --link-hover-color: #fff; /* White in dark mode */
+  }
+}
+
+/* Apply variables to the page */
 html {
-  scroll-behavior: smooth;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
 }
 
 body {
   font-family: "Inter", sans-serif;
-}
-:root {
-  --link-hover-color: #fff; /* Default hover color */
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
 }
 
+/* Ensure body classes also work */
 body.dark-theme {
-  --link-hover-color: #fff; /* Hover color for dark theme */
+  --text-color: #fff;
+  --bg-color: #000;
+  --link-hover-color: #fff;
 }
 
 body.light-theme {
-  --link-hover-color: #000; /* Hover color for light theme */
+  --text-color: #000;
+  --bg-color: #fff;
+  --link-hover-color: #000;
 }
 
-body.dark-theme {
-  background-color: #000;
-  color: #fff;
-}
-
-body.light-theme {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Optional: Adjust link styles for both themes */
+/* Apply styles to links */
 a {
   text-decoration: none;
 }
 
 body.dark-theme a {
-  color: #fff;
+  color: var(--text-color);
 }
 
 body.light-theme a {
-  color: #000;
+  color: var(--text-color);
 }
-// h2 {
-//   margin-top: 50px !important;
-//   margin-bottom: 50px !important;
-//   font-size: medium !important;
-// }
 
-/* You can add global styles to this file, and also import other style files */
+/* Apply icon background color */
+.language-icons div {
+  border-radius: 50%;
+  background-color: var(--text-color) !important;
+  width: 100px;
+  height: 100px;
+}
 
-/* Importing Bootstrap SCSS file. */
-//@import "bootstrap/scss/bootstrap";
+/* Import Bootstrap */
+@import "bootstrap/scss/bootstrap";
