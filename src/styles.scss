@@ -65,3 +65,33 @@ body.light-theme a {
 
 /* Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
+/* Contact Section Styling */
+.contact {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer always at bottom */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative; /* Ensures it's placed correctly */
+  bottom: 0;
+}
+/* Fix the Contact and Footer on Mobile */
+@media only screen and (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact,
+  .footer {
+    text-align: center;
+    padding: 15px;
+  }
+}
