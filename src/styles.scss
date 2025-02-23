@@ -54,12 +54,14 @@ body.light-theme a {
 }
 
 /* Apply icon background color */
-.language-icons div {
-  border-radius: 50%;
-  background-color: var(--text-color) !important;
-  width: 100px;
-  height: 100px;
-}
+// .language-icons div {
+//   border-radius: 50%;
+//   background-color: var(--text-color) !important;
+//   width: 100px;
+//   height: 100px;
+//   display: flex;
+//   justify-content: center;
+// }
 
 /* Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
