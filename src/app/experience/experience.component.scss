@@ -171,14 +171,15 @@ h2 {
 //PROJECTS STUFF
 /* Gallery Styles */
 div.gallery {
-  border: 1px solid #ccc;
+  border: 5px solid #ccc;
   // width: 50%;
   // height: auto;
   border-radius: 10%;
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 3px solid #777;
+  cursor: pointer;
 }
 
 div.gallery img {
