@@ -66,11 +66,11 @@ body.light-theme a {
 /* Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
 /* Contact Section Styling */
-.contact {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-}
+// .contact {
+//   width: 100%;
+//   text-align: center;
+//   padding: 20px;
+// }
 
 /* Footer always at bottom */
 .footer {
@@ -89,9 +89,8 @@ body.light-theme a {
     align-items: center;
   }
 
-  .contact,
-  .footer {
-    text-align: center;
-    padding: 15px;
-  }
+  // .footer {
+  //   text-align: center;
+  //   padding: 15px;
+  // }
 }

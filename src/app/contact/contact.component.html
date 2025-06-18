@@ -1,25 +1,40 @@
-<div class="contact-section">
-  <!-- Left Side: Resume -->
-  <div class="resume-container">
-    <h1 class="contact-title" id="contact">Contact</h1>
-    <h2>Resume</h2>
-    <div class="resume-wrapper">
-      <embed src="Resume.pdf" type="application/pdf" class="resume-preview" />
+<div class="contact" id="contact">
+  <h1 class="contact-title">Contact</h1>
+
+  <div class="contact-wrapper">
+    <div class="contact-links">
+      <a
+        href="https://www.linkedin.com/in/pranay-parmar-623952226"
+        target="_blank"
+        class="contact-link"
+        >LinkedIn</a
+      >
+      <a href="mailto:parmarpranay30@gmail.com" class="contact-link">Email</a>
+      <a
+        href="https://github.com/PranayParmar14"
+        target="_blank"
+        class="contact-link"
+        >GitHub</a
+      >
     </div>
-  </div>
 
-  <!-- Vertical Divider -->
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- Right Side: Contact Links -->
-  <div class="contact-links">
-    <a href="https://www.linkedin.com" target="_blank" class="contact-link"
-      >LinkedIn</a
-    >
-    <a href="mailto:youremail@example.com" class="contact-link">Email</a>
-    <a href="https://github.com" target="_blank" class="contact-link">GitHub</a>
-    <a href="https://portfolio.com" target="_blank" class="contact-link"
-      >Portfolio</a
-    >
+    <div class="contact-form">
+      <h2>Send me a message</h2>
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/mvgkbola"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="button-wrapper">
+          <button type="submit">Submit</button>
+        </div>
+        <p id="formMessage" class="hidden">Message sent successfully!</p>
+      </form>
+    </div>
   </div>
 </div>

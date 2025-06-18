@@ -21,6 +21,13 @@
     object-fit: cover; /* Ensure the image fits within the circle */
   }
 
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centered on all screens */
+    gap: 20px;
+  }
+
   .resume-link {
     font-size: 1.5rem;
     font-weight: bold;
@@ -45,6 +52,31 @@
     line-height: 1.6; /* Improve line spacing */
   }
 
+  @media (max-width: 768px) {
+    .about-title {
+      text-align: center; /* Keep centered on mobile */
+    }
+
+    .about-content {
+      flex-direction: column; /* Keep vertical on mobile */
+      align-items: center;
+    }
+
+    .resume-link {
+      width: 80%; /* Adjust width dynamically */
+      max-width: 200px; /* Prevent oversized buttons */
+      margin: 0 auto; /* Ensure centering */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-description {
+      max-width: 90%;
+      text-align: center; /* Center description text on mobile */
+    }
+  }
+
   @media (min-width: 768px) {
     .about-title {
       text-align: left; /* Align to the left on larger screens */
@@ -53,6 +85,10 @@
     .about-content {
       flex-direction: row; /* Switch to horizontal layout on larger screens */
       align-items: flex-start;
+    }
+
+    .resume-link {
+      width: 500px; /* Maintain size on desktop */
     }
 
     .about-description {
