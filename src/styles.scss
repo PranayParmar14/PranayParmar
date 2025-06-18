@@ -1,21 +1,17 @@
-/* Define color variables */
 :root {
   --text-color: #000;
   --bg-color: #fff;
-  //--icon-bg-color: #ff0000; /* Default icon color */
-  --link-hover-color: #000; /* Default for light mode */
+  --link-hover-color: #000;
 }
-
-/* Dark mode overrides */
+/* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #fff;
     --bg-color: #000;
-    --link-hover-color: #fff; /* White in dark mode */
+    --link-hover-color: #fff;
   }
 }
 
-/* Apply variables to the page */
 html {
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
@@ -27,7 +23,6 @@ body {
   color: var(--text-color) !important;
 }
 
-/* Ensure body classes also work */
 body.dark-theme {
   --text-color: #fff;
   --bg-color: #000;
@@ -40,7 +35,6 @@ body.light-theme {
   --link-hover-color: #000;
 }
 
-/* Apply styles to links */
 a {
   text-decoration: none;
 }
@@ -53,44 +47,21 @@ body.light-theme a {
   color: var(--text-color);
 }
 
-/* Apply icon background color */
-// .language-icons div {
-//   border-radius: 50%;
-//   background-color: var(--text-color) !important;
-//   width: 100px;
-//   height: 100px;
-//   display: flex;
-//   justify-content: center;
-// }
-
-/* Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
-/* Contact Section Styling */
-// .contact {
-//   width: 100%;
-//   text-align: center;
-//   padding: 20px;
-// }
 
-/* Footer always at bottom */
 .footer {
   width: 100%;
   text-align: center;
   padding: 10px;
   background-color: var(--bg-color);
   color: var(--text-color);
-  position: relative; /* Ensures it's placed correctly */
+  position: relative;
   bottom: 0;
 }
-/* Fix the Contact and Footer on Mobile */
+
 @media only screen and (max-width: 768px) {
   .gallery {
     flex-direction: column;
     align-items: center;
   }
-
-  // .footer {
-  //   text-align: center;
-  //   padding: 15px;
-  // }
 }
