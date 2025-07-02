@@ -1,79 +1,28 @@
 .landing-page {
-  display: flex; /* Use Flexbox for centering */
-  flex-direction: column; /* Stack name and tagline vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  height: 85vh; /* Full viewport height */
-  text-align: center; /* Center text */
-  transform: translateY(-5%); /* Moves the section 5% upwards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  text-align: center;
+  transform: translateY(-5%);
 }
 
 .name {
-  font-size: 10rem; /* Adjust font size for name */
-  font-weight: bold; /* Bold text for name */
-  margin: 0; /* Remove default margin */
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 .tagline {
-  font-size: 1.5rem; /* Adjust font size for tagline */
-  margin: 10px 0 0 0; /* Add some space above tagline */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .landing-page {
-    transform: translateY(-3%); /* Smaller upward adjustment for mobile */
-  }
-
-  .name {
-    font-size: 6rem; /* Adjust font size for smaller screens */
-  }
-
-  .tagline {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
-}
-
-.landing-page {
-  display: flex; /* Use Flexbox for centering */
-  flex-direction: column; /* Stack name and tagline vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  height: 85vh; /* Full viewport height */
-  text-align: center; /* Center text */
-  transform: translateY(-5%); /* Moves the section 5% upwards */
-}
-
-.name {
-  font-size: 10rem; /* Adjust font size for name */
-  font-weight: bold; /* Bold text for name */
-  margin: 0; /* Remove default margin */
-}
-
-.tagline {
-  font-size: 1.5rem; /* Adjust font size for tagline */
-  margin: 10px 0 0 0; /* Add some space above tagline */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .landing-page {
-    transform: translateY(-3%); /* Smaller upward adjustment for mobile */
-  }
-
-  .name {
-    font-size: 6rem; /* Adjust font size for smaller screens */
-  }
-
-  .tagline {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
+  font-size: 1.5rem;
+  margin: 10px 0 0 0;
 }
 
 .scrollDown {
   width: 45px;
   height: 70px;
-  border: 2px solid var(--scroll-border-color); /* Fallback color for border */
+  border: 2px solid var(--scroll-border-color);
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -85,37 +34,37 @@
   transform: translateX(-50%);
   overflow: hidden;
   animation: fadeIn 1.5s ease-in-out;
-}
 
-.scrollDown span {
-  position: relative;
-  width: 8px; /* Adjusted width */
-  height: 15px; /* Adjusted height */
-  background-color: transparent; /* Make span transparent */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  span {
+    position: relative;
+    width: 8px;
+    height: 15px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.scrollDown span::before,
-.scrollDown span::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid var(--scroll-arrow-color); /* Fallback color for arrows */
-  border-bottom: 2px solid var(--scroll-arrow-color); /* Fallback color for arrows */
-  transform: rotate(45deg);
-  animation: arrowAnim 1.5s infinite ease-in-out;
-}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid var(--scroll-arrow-color);
+      border-bottom: 2px solid var(--scroll-arrow-color);
+      transform: rotate(45deg);
+      animation: arrowAnim 1.5s infinite ease-in-out;
+    }
 
-.scrollDown span::before {
-  top: 5px; /* Position the first arrow */
-}
+    &::before {
+      top: 5px;
+    }
 
-.scrollDown span::after {
-  top: 20px; /* Position the second arrow */
-  animation-delay: 0.3s; /* Delay for staggered animation */
+    &::after {
+      top: 20px;
+      animation-delay: 0.3s;
+    }
+  }
 }
 
 @keyframes arrowAnim {
@@ -133,13 +82,23 @@
   }
 }
 
-/* Theme-specific Variables */
-//   body.light-theme {
-//     --scroll-border-color: #000; /* Black border for light theme */
-//     --scroll-arrow-color: #000; /* Black arrows for light theme */
-//   }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-page {
+    transform: translateY(-3%);
+  }
 
+  .name {
+    font-size: 6rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+}
+
+/* Theme Variables */
 body.dark-theme {
-  --scroll-border-color: #fff; /* White border for dark theme */
-  --scroll-arrow-color: #fff; /* White arrows for dark theme */
+  --scroll-border-color: #fff;
+  --scroll-arrow-color: #fff;
 }

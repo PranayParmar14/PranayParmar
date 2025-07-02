@@ -4,27 +4,27 @@
   .about-title {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-align: center; /* Centered by default for mobile */
+    text-align: center;
   }
 
   .about-content {
     display: flex;
-    flex-direction: column; /* Default to stacking content vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Add spacing between elements */
+    gap: 20px;
   }
 
   .about-image {
-    width: 150px; /* Adjust size of the image */
+    width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* Ensure the image fits within the circle */
+    object-fit: cover;
   }
 
   .contact-links {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centered on all screens */
+    align-items: center;
     gap: 20px;
   }
 
@@ -39,33 +39,33 @@
     border-radius: 5px;
     transition: all 0.3s ease;
     width: 500px;
-  }
 
-  .resume-link:hover {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    &:hover {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
   }
 
   .about-description {
-    max-width: 90%; /* Limit width for better readability */
-    text-align: justify; /* Align text for easier reading */
-    line-height: 1.6; /* Improve line spacing */
+    max-width: 90%;
+    text-align: justify;
+    line-height: 1.6;
   }
 
   @media (max-width: 768px) {
     .about-title {
-      text-align: center; /* Keep centered on mobile */
+      text-align: center;
     }
 
     .about-content {
-      flex-direction: column; /* Keep vertical on mobile */
+      flex-direction: column;
       align-items: center;
     }
 
     .resume-link {
-      width: 80%; /* Adjust width dynamically */
-      max-width: 200px; /* Prevent oversized buttons */
-      margin: 0 auto; /* Ensure centering */
+      width: 80%;
+      max-width: 200px;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -73,27 +73,27 @@
 
     .about-description {
       max-width: 90%;
-      text-align: center; /* Center description text on mobile */
+      text-align: center;
     }
   }
 
   @media (min-width: 768px) {
     .about-title {
-      text-align: left; /* Align to the left on larger screens */
+      text-align: left;
     }
 
     .about-content {
-      flex-direction: row; /* Switch to horizontal layout on larger screens */
+      flex-direction: row;
       align-items: flex-start;
     }
 
     .resume-link {
-      width: 500px; /* Maintain size on desktop */
+      width: 500px;
     }
 
     .about-description {
-      max-width: 60%; /* Increase readable width on larger screens */
-      text-align: left; /* Align text to the left for a clean desktop look */
+      max-width: 60%;
+      text-align: left;
     }
   }
 }

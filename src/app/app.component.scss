@@ -2,73 +2,74 @@
   margin-top: 60px;
   padding: 20px;
   box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for content area */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* The .content class is used to add space between the navbar and the content of the page. */
+/* Theme Toggle */
 .theme-toggle-container {
-  position: fixed; /* Sticks to the viewport */
-  bottom: 20px; /* 20px from the bottom of the screen */
-  right: 20px; /* 20px from the right of the screen */
-  z-index: 100; /* Ensures it's above other elements */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
 }
 
 .theme-toggle {
   display: inline-block;
   width: 40px;
   height: 20px;
-  background: #ccc; /* Default background color */
+  background: #ccc;
   border-radius: 20px;
   cursor: pointer;
   position: relative;
-  transition: background-color 0.3s ease; /* Smooth transition for background */
+  transition: background-color 0.3s ease;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 20px;
+    transition: 0.3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      background: white;
+      border-radius: 50%;
+      bottom: 3px;
+      left: 3px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+  }
+
+  input:checked + .slider {
+    background: #fff;
+
+    &::before {
+      transform: translateX(20px);
+      background: black;
+    }
+  }
 }
 
-.theme-toggle input {
-  opacity: 0; /* Hide the default checkbox */
-  width: 0;
-  height: 0;
-}
-
-.theme-toggle .slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000000; /* Background for active state */
-  border-radius: 20px;
-  transition: 0.3s ease; /* Smooth transition for slider background */
-}
-
-.theme-toggle input:checked + .slider {
-  background: #ffffff; /* Background when toggled */
-}
-
-.theme-toggle .slider::before {
-  content: "";
-  position: absolute;
-  height: 14px;
-  width: 14px;
-  background: white;
-  border-radius: 50%;
-  bottom: 3px;
-  left: 3px;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for knob */
-}
-
-.theme-toggle input:checked + .slider::before {
-  transform: translateX(20px); /* Moves the knob to the right */
-  background: black; /* Adjust knob background */
-}
-
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
-  background-color: inherit; /* Matches the theme */
-  color: inherit; /* Matches the text color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for footer */
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-theme .footer {
